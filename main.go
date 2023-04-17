@@ -25,11 +25,11 @@ func main() {
 	e.DELETE("/", DeleteUser)
 
 	// Start server
-	// e.Logger.Fatal(e.Start(":80"))
+	e.Logger.Fatal(e.Start(":80"))
 
-	if err := e.StartTLS(":8443", "server.crt", "server.key"); err != http.ErrServerClosed {
-		log.Fatal(err)
-	}
+	// if err := e.StartTLS(":8443", "server.crt", "server.key"); err != http.ErrServerClosed {
+	// 	log.Fatal(err)
+	// }
 }
 
 type User struct {

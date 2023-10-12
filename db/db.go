@@ -11,7 +11,7 @@ import (
   
   func MongoConn() *mongo.Client {
 	serverAPI := options.ServerAPI(options.ServerAPIVersion1)
-	opts := options.Client().ApplyURI("mongodb+srv://namaanekamal:9DC67HIMQTBaFTG5@cluster1.ddoifk0.mongodb.net/?retryWrites=true&w=majority").SetServerAPIOptions(serverAPI)
+	opts := options.Client().ApplyURI("mongodb+srv://user:password@nama_cluster.ddoifk0.mongodb.net/?retryWrites=true&w=majority").SetServerAPIOptions(serverAPI)
 	
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
